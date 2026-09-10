@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:meditaion_app/constans/constans.dart';
+import 'package:meditaion_app/widget/bottom_nav_items_widget.dart';
 import 'package:meditaion_app/widget/category_widget.dart';
 
 void main() {
@@ -33,6 +34,31 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomNavigationBar: Container(
+        padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 30.0),
+        height: 120.0,
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            BuildBottomNavItems(
+              svgSrc: 'assets/icons/calendar.svg',
+              title: 'امروز',
+              isActive: false,
+            ),
+            BuildBottomNavItems(
+              svgSrc: 'assets/icons/calendar.svg',
+              title: 'تمرینات',
+              isActive: true,
+            ),
+            BuildBottomNavItems(
+              svgSrc: 'assets/icons/calendar.svg',
+              title: 'تنظیمات',
+              isActive: false,
+            ),
+          ],
+        ),
+      ),
       body: Stack(
         children: [
           Container(
