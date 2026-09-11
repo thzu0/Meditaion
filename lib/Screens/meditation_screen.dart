@@ -5,6 +5,7 @@ import 'package:meditaion_app/constans/constans.dart';
 import 'package:meditaion_app/widget/bottom_nav_items_widget.dart';
 import 'package:meditaion_app/widget/lesson_card_widget.dart';
 import 'package:meditaion_app/widget/search_bar_widget.dart';
+//
 
 class MeditationScreen extends StatelessWidget {
   const MeditationScreen({super.key});
